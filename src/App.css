@@ -3,6 +3,7 @@
   background-color: white;
   height: 100vh;
   color: black;
+  display: flex;
 }
 
 
@@ -122,11 +123,6 @@
   cursor: pointer;
 }
 
-.up-container {
-  display: flex;
-  
-}
-
 .right-container  {
   width: 315px;
   height: 148px;
@@ -178,7 +174,7 @@
 
 .right-container-second img {
 width: 51.06px;
-height: 50px;
+height: 70px;
 margin: 15px;
 }
 
