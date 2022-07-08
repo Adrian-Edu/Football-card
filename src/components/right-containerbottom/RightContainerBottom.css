@@ -1,0 +1,38 @@
+
+
+.right-container-second {
+    width: 315px;
+    height: 74px;
+    background: linear-gradient(274.42deg, #C0C0C0 0%, #7E8082 124.45%);
+    border-radius: 22px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-container-second img {
+  width: 51.06px;
+  height: 70px;
+  margin: 15px;
+  }
+  
+  .right-container-second h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin: 15px 0;
+    }
+  
+  .right-container-second p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    }
+    
+  

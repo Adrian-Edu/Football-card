@@ -1,0 +1,40 @@
+
+
+.right-container  {
+    width: 315px;
+    height: 148px;
+    border-radius: 22px;
+    background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
+    margin: 20px;
+  }
+  
+  .right-container-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-container-first img {
+    width: 89px;
+    height: 124px;
+    margin: 15px;
+  }
+  
+  .right-container-first-h-p :first-child {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin: 15px 0 0 0 ;
+  }
+  
+  .right-container-first-h-p :last-child {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
