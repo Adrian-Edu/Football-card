@@ -1,15 +1,18 @@
+import React from "react"
+import "./LeftContainertTop.css"
 
-function RightTop () {
+
+function AddTeam () {
     return (
-        <div className="left-container">
-        <div className="container">
+        <div className="top-container">
           <h1>Football Teams</h1>
-          <div className="mid-container">
-            <form className="form">
-              <input></input>
-              <input></input>
-              <button>Add a Team</button>
-            </form>
-          </div>
+          <form className="form">
+            <input></input>
+            <input></input>
+            <button>Add a Team</button>
+          </form>
+        </div>
     )
 }
+
+export default AddTeam
