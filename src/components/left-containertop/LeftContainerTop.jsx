@@ -5,8 +5,9 @@ import "./LeftContainertTop.css"
 function AddTeam () {
 
   const [changeTeam, setChangeTeam] = useState("Club Name")
-
   const [changeUrl, setChangeURl] = useState("Logo Url")
+  const [changeTheTeam, setChangeTheTeam] = useState ("")
+  const [changeTheUrl, setChangeTheUrl] = useState ("")
 
    const handleTeamChange = (e) => {
     setChangeTeam(e.target.value)
@@ -28,6 +29,10 @@ function AddTeam () {
 
     console.log(changeTeam)
     console.log(changeUrl)
+
+    setChangeTheTeam(changeTeam)
+    setChangeTheUrl(changeUrl)
+
 
     setChangeTeam(" ")
     setChangeURl(" ")
