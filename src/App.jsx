@@ -6,13 +6,14 @@ import RightTopCard from "./components/right-containertop/RightComponent";
 import RightBottomCard from "./components/right-containerbottom/RightContainerBottom";
 
 function App() {
+
   return (
     <div className="page-container">
       <div className="container">
         
         < AddTeam />
         < Vote />
-      
+
       </div>
 
       <div className="right-container">
