@@ -10,6 +10,7 @@
   
   .right-container-first {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -20,7 +21,7 @@
     margin: 15px;
   }
   
-  .right-container-first-h-p :first-child {
+  .right-container-first-h-p h4 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -28,13 +29,44 @@
     line-height: 36px;
     color: #FFFFFF;
     margin: 15px 0 0 0 ;
+    height: 100px;
   }
-  
-  .right-container-first-h-p :last-child {
+
+  .right-container-votes-number {
+    display: flex;
+    height: 30px;
+    padding: 0 0 15px 0;
+  }
+
+
+  .right-container-votes-number :first-child {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 21px;
     color: #FFFFFF;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
+
+  .right-container-votes-number :last-child {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin: 0 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+.right-container-first-h-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

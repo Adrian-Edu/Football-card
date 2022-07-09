@@ -5,21 +5,34 @@ import Vote from "./components/left-containerbottom/LeftContainerBottom";
 import RightTopCard from "./components/right-containertop/RightComponent";
 import RightBottomCard from "./components/right-containerbottom/RightContainerBottom";
 
-function App() {
+function App(props) {
+
+  const nume = "Real Madrid";
+  const url = "https://upload.wikimedia.org/wikipedia/ro/thumb/5/56/Real_Madrid_CF.svg/1468px-Real_Madrid_CF.svg.png"
+
 
   return (
     <div className="page-container">
       <div className="container">
         
         < AddTeam />
-        < Vote />
+        < Vote 
+        nume = {nume}
+        url = {url}
+        />
 
       </div>
 
       <div className="right-container">
 
-          < RightTopCard />
-          < RightBottomCard />
+          < RightTopCard 
+           nume = {nume}
+           url = {url}
+           />
+          < RightBottomCard 
+           nume = {nume}
+           url = {url}
+           />
         
       </div>
     </div>
