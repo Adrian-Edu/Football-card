@@ -1,7 +1,15 @@
 import "./LeftContainerBottom.css"
 import React, {useState} from "react"
 
-function Vote (props) {
+function Vote () {
+
+  const [changeVote, setChangeVote]= useState(0)
+
+  const handleClick = () => {
+    setChangeVote(changeVote + 1)
+  }
+
+
     return (
           
         <div className="bottom-container">
@@ -14,13 +22,13 @@ function Vote (props) {
         <div className="mid-writing">
           <h4>Real Madrid</h4>
             <div> 
-            <p>5</p>
+            <p>{changeVote}</p>
             <h4>Votes</h4>
            </div>
         </div>
 
         <div>
-          <button className="vote">Vote</button>
+          <button onClick={handleClick} className="vote">Vote</button>
         </div>
       </div>
     )
