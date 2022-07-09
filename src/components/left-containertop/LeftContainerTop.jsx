@@ -33,8 +33,13 @@ function AddTeam () {
 
     console.log(dataTeam)
 
+    setChangeTeam(" ")
+    setChangeURl(" ")
+
     e.preventDefault()
    }
+
+
  
     return (
         <div className="top-container">

@@ -1,7 +1,9 @@
 import "./LeftContainerBottom.css"
+import React, {useState} from "react"
 
 function Vote (props) {
     return (
+          
         <div className="bottom-container">
         <div className="logo">
           <img
@@ -11,7 +13,10 @@ function Vote (props) {
         </div>
         <div className="mid-writing">
           <h4>Real Madrid</h4>
-          <p>Votes</p>
+            <div> 
+            <p>5</p>
+            <h4>Votes</h4>
+           </div>
         </div>
 
         <div>

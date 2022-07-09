@@ -30,6 +30,14 @@
     font-size: 12px;
     line-height: 18px;
     color: #7B6F72;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .mid-writing  :last-child  h4 {
+    margin: 0 10px;
+   
   }
   
   .vote {
