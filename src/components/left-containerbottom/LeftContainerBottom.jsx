@@ -1,6 +1,6 @@
 import "./LeftContainerBottom.css"
 
-function Vote () {
+function Vote (props) {
     return (
         <div className="bottom-container">
         <div className="logo">
