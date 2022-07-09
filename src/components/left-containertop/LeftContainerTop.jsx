@@ -6,13 +6,12 @@ function AddTeam () {
 
 
 
-
     return (
         <div className="top-container">
           <h1>Football Teams</h1>
           <form className="form">
-            <input></input>
-            <input></input>
+            <input  ></input>
+            <input  ></input>
             <button>Add a Team</button>
           </form>
         </div>
