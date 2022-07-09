@@ -1,15 +1,22 @@
 import "./RightContainerBottom.css"
 
-function RightBottomCard () {
+function RightBottomCard (props) {
     return  (
         <div className="right-container-second">
         <img
-          src="https://upload.wikimedia.org/wikipedia/ro/thumb/5/56/Real_Madrid_CF.svg/1468px-Real_Madrid_CF.svg.png"
-          alt=""
+           src={props.url}
+            alt=""
         />
+        
         <div className="right-container-first-h-p-second">
-          <h4>Real Madrid</h4>
+          <h4>{props.nume}</h4>
+
+          <div className="right-container-first-2-p">
+          <p>1</p>
           <p>Votes</p>
+
+          </div>
+        
         </div>
       </div>
 

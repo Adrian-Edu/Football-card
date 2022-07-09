@@ -3,7 +3,7 @@ import "./LeftContainertTop.css"
 
 
 function AddTeam () {
- 
+
   const [changeTeam, setChangeTeam] = useState("Club Name")
 
   const [changeUrl, setChangeURl] = useState("Logo Url")
@@ -26,15 +26,16 @@ function AddTeam () {
 
    const handleSubmit = (e) => {
 
-    const dataTeam = [{
-      team: changeTeam,
-      url : changeUrl
-    }]
+    console.log(changeTeam)
+    console.log(changeUrl)
 
-    console.log(dataTeam)
+    setChangeTeam(" ")
+    setChangeURl(" ")
 
     e.preventDefault()
    }
+
+
  
     return (
         <div className="top-container">
