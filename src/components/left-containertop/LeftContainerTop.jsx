@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import "./LeftContainertTop.css"
 
 
-function AddTeam () {
+function AddTeam (props) {
 
   const [changeTeam, setChangeTeam] = useState("Club Name")
   const [changeUrl, setChangeURl] = useState("Logo Url")
@@ -33,6 +33,7 @@ function AddTeam () {
     setChangeTheTeam(changeTeam)
     setChangeTheUrl(changeUrl)
 
+    props.onAddTeam("copchil",changeTeam) 
 
     setChangeTeam(" ")
     setChangeURl(" ")
