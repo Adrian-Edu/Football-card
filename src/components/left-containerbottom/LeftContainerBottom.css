@@ -9,13 +9,7 @@
     display: flex;
     align-items: center;
   }
-  
-  
-.mid-writing {
-    width: 104.98;
-    height: 25.94;
-  }
-  
+    
   
   .mid-writing  :first-child {
     font-family: 'Poppins';
@@ -52,4 +46,9 @@
     position: relative;
     left: 100px;
     cursor: pointer;
+  }
+
+  .logo img {
+    height: 80px;
+    width: 70px;
   }
