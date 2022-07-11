@@ -7,19 +7,18 @@ import RightBottomCard from "./components/right-containerbottom/RightContainerBo
 
 function App(props) {
 
-  const nume = "FCSB"
-  const url = "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Steaua_Bucure%C8%99ti.svg/1200px-Steaua_Bucure%C8%99ti.svg.png"
-
   const [addTeamName, setAddTeamName] = useState("")
   const [addTeamUrl, setAddTeamUrl] = useState("")
 
+  const nume = addTeamName
+  const url = addTeamUrl
 
   const onTeamAdd = (team) => {
-    console.log(team) 
+    setAddTeamName(team) 
   }
 
   const onTeamUrl = (url) => {
-  console.log(url) 
+    setAddTeamUrl(url) 
   }
 
   return (

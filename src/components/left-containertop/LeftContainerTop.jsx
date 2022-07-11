@@ -33,8 +33,8 @@ function AddTeam (props) {
     setChangeTheTeam(changeTeam)
     setChangeTheUrl(changeUrl)
 
-    props.onAddTeam("Ce pula mea??")
-    props.onAddTeamUrl("Ce pizda mea??")
+    props.onAddTeam(changeTeam)
+    props.onAddTeamUrl(changeUrl)
 
     setChangeTeam(" ")
     setChangeURl(" ")
