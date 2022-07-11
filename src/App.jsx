@@ -9,9 +9,11 @@ function App(props) {
 
   const [addTeamName, setAddTeamName] = useState("")
   const [addTeamUrl, setAddTeamUrl] = useState("")
+  const [addVote, setAddVote] = useState("")
 
   const nume = addTeamName
   const url = addTeamUrl
+  const vote = addVote
 
   const onTeamAdd = (team) => {
     setAddTeamName(team) 
@@ -21,6 +23,11 @@ function App(props) {
     setAddTeamUrl(url) 
   }
 
+  const onChangeVote = (vote) => {
+    setAddVote(vote) 
+  }
+
+
   return (
     <div className="page-container">
       <div className="container">
@@ -28,6 +35,7 @@ function App(props) {
         < AddTeam 
         onAddTeam = {onTeamAdd} 
         onAddTeamUrl = {onTeamUrl}
+        onSetAddVote = {onChangeVote}
         />
 
         < Vote 
@@ -42,10 +50,12 @@ function App(props) {
           < RightTopCard 
            nume = {nume}
            url = {url}
+           vote = {vote}
            />
           < RightBottomCard 
            nume = {nume}
            url = {url}
+           vote = {vote}
            />
         
       </div>

@@ -7,8 +7,9 @@ function Vote (props) {
 
   const handleClick = () => {
     setChangeVote(changeVote + 1)
-  }
 
+    props.onChangeVote(changeVote + 1)
+  }
 
     return (
           
