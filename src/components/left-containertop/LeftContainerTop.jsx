@@ -2,11 +2,12 @@ import React, {useState} from "react"
 import "./LeftContainertTop.css"
 
 
-function AddTeam () {
+function AddTeam (props) {
 
   const [changeTeam, setChangeTeam] = useState("Club Name")
-
   const [changeUrl, setChangeURl] = useState("Logo Url")
+  const [changeTheTeam, setChangeTheTeam] = useState ("")
+  const [changeTheUrl, setChangeTheUrl] = useState ("")
 
    const handleTeamChange = (e) => {
     setChangeTeam(e.target.value)
@@ -28,6 +29,12 @@ function AddTeam () {
 
     console.log(changeTeam)
     console.log(changeUrl)
+
+    setChangeTheTeam(changeTeam)
+    setChangeTheUrl(changeUrl)
+
+    props.onAddTeam(changeTeam)
+    props.onAddTeamUrl(changeUrl)
 
     setChangeTeam(" ")
     setChangeURl(" ")

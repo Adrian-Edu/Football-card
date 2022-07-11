@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import "./App.css";
 import AddTeam from "./components/left-containertop/LeftContainerTop";
 import Vote from "./components/left-containerbottom/LeftContainerBottom";
@@ -7,15 +7,29 @@ import RightBottomCard from "./components/right-containerbottom/RightContainerBo
 
 function App(props) {
 
-  const nume = "Real Madrid";
-  const url = "https://upload.wikimedia.org/wikipedia/ro/thumb/5/56/Real_Madrid_CF.svg/1468px-Real_Madrid_CF.svg.png"
+  const [addTeamName, setAddTeamName] = useState("")
+  const [addTeamUrl, setAddTeamUrl] = useState("")
 
+  const nume = addTeamName
+  const url = addTeamUrl
+
+  const onTeamAdd = (team) => {
+    setAddTeamName(team) 
+  }
+
+  const onTeamUrl = (url) => {
+    setAddTeamUrl(url) 
+  }
 
   return (
     <div className="page-container">
       <div className="container">
         
-        < AddTeam />
+        < AddTeam 
+        onAddTeam = {onTeamAdd} 
+        onAddTeamUrl = {onTeamUrl}
+        />
+
         < Vote 
         nume = {nume}
         url = {url}
