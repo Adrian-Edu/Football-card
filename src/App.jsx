@@ -41,6 +41,7 @@ function App(props) {
         < Vote 
         nume = {nume}
         url = {url}
+        vote = {vote}
         />
 
       </div>
