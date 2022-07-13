@@ -25,7 +25,7 @@ function Vote (props) {
         <div className="mid-writing">
           <h4>{props.nume}</h4>
             <div> 
-            <p>{props.vote}</p>
+            <p>{changeVote}</p>
             <h4>Votes</h4>
            </div>
         </div>
