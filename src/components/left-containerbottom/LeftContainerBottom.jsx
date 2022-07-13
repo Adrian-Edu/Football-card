@@ -9,6 +9,7 @@ function Vote (props) {
     setChangeVote(changeVote + 1)
     
     props.onChangeVote(changeVote)
+ 
   }
 
     return (

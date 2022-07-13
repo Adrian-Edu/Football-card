@@ -10,6 +10,8 @@ function App(props) {
   const [addTeamName, setAddTeamName] = useState("");
   const [addTeamUrl, setAddTeamUrl] = useState("");
   const [addVote, setAddVote] = useState("");
+  const [addVote1, setAddVote1] = useState("");
+  const [addVote2, setAddVote2] = useState("");
 
 
   const data = [
@@ -42,19 +44,25 @@ function App(props) {
     setAddVote(vote);
   };
 
+  const onChangeVote1 = (vote) => {
+    setAddVote1(vote);
+  };
+
+  const onChangeVote2 = (vote) => {
+    setAddVote2(vote);
+  };
 
   return (
-    <div className="page-container">
+    <div className="page-container">s
       <div className="container">
         <AddTeam
           onAddTeam={onTeamAdd}
           onAddTeamUrl={onTeamUrl}
-     
         />
 
         <Vote nume={data[0].nume} url={data[0].url} setAddVot={data[0].vote}  onChangeVote={onChangeVote}/>
         <Vote nume={data[1].nume} url={data[1].url} setAddVot={data[1].vote}  onChangeVote={onChangeVote} />
-        <Vote nume={data[2].nume} url={data[2].url} setAddVot={data[2].vote}  onChangeVote={onChangeVote} />
+        <Vote nume={data[2].nume} url={data[2].url} setAddVot={data[2].vote}   onChangeVote={onChangeVote} />
         
       </div>
 
