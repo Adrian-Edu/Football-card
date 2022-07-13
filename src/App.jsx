@@ -49,12 +49,12 @@ function App(props) {
         <AddTeam
           onAddTeam={onTeamAdd}
           onAddTeamUrl={onTeamUrl}
-          onSetAddVote={onChangeVote}
+     
         />
 
-        <Vote nume={data[0].nume} url={data[0].url} setAddVot={data[0].vote} />
-        <Vote nume={data[1].nume} url={data[1].url} setAddVot={data[1].vote} />
-        <Vote nume={data[2].nume} url={data[2].url} setAddVot={data[2].vote} />
+        <Vote nume={data[0].nume} url={data[0].url} setAddVot={data[0].vote}  onChangeVote={onChangeVote}/>
+        <Vote nume={data[1].nume} url={data[1].url} setAddVot={data[1].vote}  onChangeVote={onChangeVote} />
+        <Vote nume={data[2].nume} url={data[2].url} setAddVot={data[2].vote}  onChangeVote={onChangeVote} />
         
       </div>
 

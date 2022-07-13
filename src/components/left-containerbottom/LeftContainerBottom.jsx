@@ -4,14 +4,12 @@ import React, {useState} from "react"
 function Vote (props) {
 
   const [changeVote, setChangeVote]= useState(0)
-  const [sendMess, setSendMess] = useState("")
 
   const handleClick = () => {
     setChangeVote(changeVote + 1)
     
     props.onChangeVote(changeVote)
   }
-
 
     return (
           
