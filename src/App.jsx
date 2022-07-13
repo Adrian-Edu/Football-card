@@ -7,21 +7,28 @@ import RightBottomCard from "./components/right-containerbottom/RightContainerBo
 
 function App(props) {
 
+  const [addTeamName, setAddTeamName] = useState("");
+  const [addTeamUrl, setAddTeamUrl] = useState("");
+  const [addVote, setAddVote] = useState("");
+
+
   const data = [
     {
       nume: addTeamName,
       url: addTeamUrl,
       vote: addVote
+    },
+    {
+      nume: "FCSB",
+      url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
+      vote: addVote
+    },
+    {
+      nume: "FC Barcelona",
+      url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
+      vote: addVote
     }
   ]
-
-  const nume = addTeamName;
-  const url = addTeamUrl;
-  const vote = addVote;
-
-  const [addTeamName, setAddTeamName] = useState("");
-  const [addTeamUrl, setAddTeamUrl] = useState("");
-  const [addVote, setAddVote] = useState("");
 
   const onTeamAdd = (team) => {
     setAddTeamName(team);
@@ -45,13 +52,16 @@ function App(props) {
           onSetAddVote={onChangeVote}
         />
 
-        <Vote nume={nume} url={url} setAddVot={vote} />
+        <Vote nume={data[0].nume} url={data[0].url} setAddVot={data[0].vote} />
+        <Vote nume={data[1].nume} url={data[1].url} setAddVot={data[1].vote} />
+        <Vote nume={data[2].nume} url={data[2].url} setAddVot={data[2].vote} />
         
       </div>
 
       <div className="right-container">
-        <RightTopCard nume={nume} url={url} vote={vote} />
-        <RightBottomCard nume={nume} url={url} vote={vote} />
+        <RightTopCard nume={data[0].nume} url={data[0].url} vote={data[0].vote} />
+        <RightBottomCard nume={data[1].nume} url={data[1].url} vote={data[1].vote} />
+        <RightBottomCard nume={data[2].nume} url={data[2].url} vote={data[2].vote} />
       </div>
     </div>
   );
