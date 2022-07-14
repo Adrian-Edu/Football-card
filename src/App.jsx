@@ -9,26 +9,25 @@ function App(props) {
 
   const [addTeamName, setAddTeamName] = useState("");
   const [addTeamUrl, setAddTeamUrl] = useState("");
-  const [addVote, setAddVote] = useState("");
-  const [addVote1, setAddVote1] = useState("");
-  const [addVote2, setAddVote2] = useState("");
-
+  const [addVoteNr0, setAddVoteNr0] = useState("");
+  const [addVoteNr1, setAddVoteNr1] = useState("");
+  const [addVoteNr2, setAddVoteNr2] = useState("");
 
   const data = [
     {
       nume: addTeamName,
       url: addTeamUrl,
-      vote: addVote
+      vote: addVoteNr0
     },
     {
       nume: "FCSB",
       url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
-      vote: addVote
+      vote: addVoteNr1
     },
     {
       nume: "FC Barcelona",
       url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
-      vote: addVote
+      vote: addVoteNr2
     }
   ]
 
@@ -40,17 +39,22 @@ function App(props) {
     setAddTeamUrl(url);
   };
 
-  const onChangeVote = (vote) => {
-    setAddVote(vote);
+  const onChangeVoteNr0 = (vote) => {
+    setAddVoteNr0(vote);
   };
 
-  const onChangeVote1 = (vote) => {
-    setAddVote1(vote);
+  
+  const onChangeVoteNr1 = (vote) => {
+    setAddVoteNr1(vote);
   };
 
-  const onChangeVote2 = (vote) => {
-    setAddVote2(vote);
+
+  const onChangeVoteNr2 = (vote) => {
+    setAddVoteNr2(vote);
   };
+
+
+
 
   return (
     <div className="page-container">s
@@ -60,9 +64,9 @@ function App(props) {
           onAddTeamUrl={onTeamUrl}
         />
 
-        <Vote nume={data[0].nume} url={data[0].url} setAddVot={data[0].vote}  onChangeVote={onChangeVote}/>
-        <Vote nume={data[1].nume} url={data[1].url} setAddVot={data[1].vote}  onChangeVote={onChangeVote} />
-        <Vote nume={data[2].nume} url={data[2].url} setAddVot={data[2].vote}   onChangeVote={onChangeVote} />
+        <Vote nume={data[0].nume} url={data[0].url} onChangeVoteNr0={onChangeVoteNr0}/>
+        <Vote nume={data[1].nume} url={data[1].url} onChangeVoteNr1={onChangeVoteNr1} />
+        <Vote nume={data[2].nume} url={data[2].url} onChangeVoteNr2={onChangeVoteNr2} />
         
       </div>
 
