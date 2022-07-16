@@ -25,10 +25,10 @@ function App(props) {
       vote: addVoteNr1
     },
     {
-      nume: "FC Barcelona",
+      nume: "FCSB",
       url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
       vote: addVoteNr2
-    }
+    },
   ]
 
   const onTeamAdd = (team) => {

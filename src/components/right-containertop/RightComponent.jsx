@@ -2,6 +2,7 @@ import "./RightComponentTop.css"
 
 function RightTopCard (props) {
     return (
+        <div>
         <div className="right-container-first">
         <img
           src={props.url}
@@ -16,6 +17,7 @@ function RightTopCard (props) {
           <p>Votes</p>
           </div>
           
+        </div>
         </div>
         </div>
     )
