@@ -64,9 +64,9 @@ function App(props) {
           onAddTeamUrl={onTeamUrl}
         />
 
-        <Vote nume={data[0].nume} url={data[0].url} onChangeVoteNr0={onChangeVoteNr0}/>
-        <Vote nume={data[1].nume} url={data[1].url} onChangeVoteNr1={onChangeVoteNr1} />
-        <Vote nume={data[2].nume} url={data[2].url} onChangeVoteNr2={onChangeVoteNr2} />
+        <Vote nume={data[0].nume} url={data[0].url} onChangeVote={onChangeVoteNr0}/>
+        <Vote nume={data[1].nume} url={data[1].url} onChangeVote={onChangeVoteNr1} />
+        <Vote nume={data[2].nume} url={data[2].url} onChangeVote={onChangeVoteNr2} />
         
       </div>
 

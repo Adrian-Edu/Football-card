@@ -8,6 +8,7 @@
     margin: 15px;
     display: flex;
     align-items: center;
+    flex-wrap: ;
   }
     
   
@@ -50,5 +51,5 @@
 
   .logo img {
     height: 80px;
-    width: 70px;
+    width: 80px;
   }
