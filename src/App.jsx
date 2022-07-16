@@ -9,9 +9,9 @@ function App(props) {
 
   const [addTeamName, setAddTeamName] = useState("");
   const [addTeamUrl, setAddTeamUrl] = useState("");
-  const [addVoteNr0, setAddVoteNr0] = useState("");
-  const [addVoteNr1, setAddVoteNr1] = useState("");
-  const [addVoteNr2, setAddVoteNr2] = useState("");
+  const [addVoteNr0, setAddVoteNr0] = useState("0");
+  const [addVoteNr1, setAddVoteNr1] = useState("0");
+  const [addVoteNr2, setAddVoteNr2] = useState("0");
 
   const data = [
     {
