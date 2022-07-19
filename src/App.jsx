@@ -6,36 +6,23 @@ import RightTopCard from "./components/right-containertop/RightComponent";
 import RightBottomCard from "./components/right-containerbottom/RightContainerBottom";
 
 const data = [
-  {
-    nume: "FCSB",
-    url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
-    vote: 0
-  },
-  {
-    nume: "FCSB",
-    url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
-    vote: 1
-  },  
-  {
-    nume: "FCSB",
-    url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
-    vote: 0
-  },
-  {
-    nume: "FCSB",
-    url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
-    vote: 1
-  },
-]
 
+]
 
 function App(props) {
 
   const [teams, setTeams] = useState(data)
 
   const onTeamAdd = (team) => {
-    console.log(team);
-  };
+    // aici o sa primesti datele din copil (faci call la o functie din copil si trimiti ca parametru team)
+    console.log(team) // aici cel mai probabil o sa vrei sa adaogi echipa in state-ul ce tine toate echipele
+    setTeams(
+      prevState => [
+        ...prevState, // punem tot ce era in state
+         team // si mai adaugam o pozie noua - obiectul team
+      ]
+    )
+  }
 
   return (
     <div className="page-container">s
@@ -44,12 +31,16 @@ function App(props) {
           onAddTeam={onTeamAdd}
         />
 
-        {teams.map((item)=> ( <Vote nume={item.nume} url={item.url} onChangeVote={onChangeVoteNr0}/>) )} 
+        {teams.map((item)=> ( <Vote nume={item.nume} url={item.url} onChangeVote={0}/>) )} 
      
       </div>
 
       <div className="right-container">
       
+      <RightTopCard />
+      <RightBottomCard />
+
+
       </div>
     </div>
   );
