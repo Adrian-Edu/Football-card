@@ -23,15 +23,22 @@ function App(props) {
       ]
     )
   }
+  
+  const uniqueVote = (id) => {
+    console.log(id)
+  }
 
   return (
     <div className="page-container">s
       <div className="container">
         <AddTeam
           onAddTeam={onTeamAdd}
+
         />
 
-        {teams.map((item)=> ( <Vote nume={item.nume} url={item.url} onChangeVote={0}/>) )} 
+ 
+
+        {teams.map((item,key)=> ( <Vote key={key} nume={item.name} url={item.url} onChangeVote={0}/>) )} 
      
       </div>
 
