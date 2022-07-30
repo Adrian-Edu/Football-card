@@ -5,12 +5,11 @@ function Vote (props) {
 
   const [changeVote, setChangeVote]= useState(0)
 
+  
   const handleClick = (e) => {
     setChangeVote(changeVote + 1)
     props.onChangeVote(changeVote)
   }
-
-
 
     return (
           
