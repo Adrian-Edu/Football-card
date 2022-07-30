@@ -33,8 +33,7 @@ function AddTeam (props) {
     setChangeTheTeam(changeTeam)
     setChangeTheUrl(changeUrl)
 
-    props.onAddTeam(changeTeam)
-    props.onAddTeamUrl(changeUrl)
+    props.onAddTeam({name: changeTeam, url: changeUrl})
 
     setChangeTeam(" ")
     setChangeURl(" ")

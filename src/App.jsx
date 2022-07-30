@@ -5,49 +5,57 @@ import Vote from "./components/left-containerbottom/LeftContainerBottom";
 import RightTopCard from "./components/right-containertop/RightComponent";
 import RightBottomCard from "./components/right-containerbottom/RightContainerBottom";
 
+const data = [
+
+]
+
 function App(props) {
 
-  const [addTeamName, setAddTeamName] = useState("")
-  const [addTeamUrl, setAddTeamUrl] = useState("")
-
-  const nume = addTeamName
-  const url = addTeamUrl
+  const [teams, setTeams] = useState(data)
+  const [recieveVote, setRecieveVote] = useState("")
 
   const onTeamAdd = (team) => {
-    setAddTeamName(team) 
+    // aici o sa primesti datele din copil (faci call la o functie din copil si trimiti ca parametru team)
+    console.log(team) // aici cel mai probabil o sa vrei sa adaogi echipa in state-ul ce tine toate echipele
+    setTeams(
+      prevState => [
+        ...prevState, // punem tot ce era in state
+         team // si mai adaugam o pozie noua - obiectul team
+      ]
+    )
   }
 
-  const onTeamUrl = (url) => {
-    setAddTeamUrl(url) 
+  const onTeamId = (id) => {
+    console.log(id)
+    setRecieveVote(
+      prevState => [
+        ...prevState, id
+      ]
+    )
+  }
+
+  const reciveVote = (changeVote) => {
+    setRecieveVote(changeVote)
   }
 
   return (
-    <div className="page-container">
+    <div className="page-container">s
       <div className="container">
-        
-        < AddTeam 
-        onAddTeam = {onTeamAdd} 
-        onAddTeamUrl = {onTeamUrl}
+        <AddTeam
+          onAddTeam={onTeamAdd}
+          onAddId = {onTeamId}
         />
 
-        < Vote 
-        nume = {nume}
-        url = {url}
-        />
-
+        {teams.map((item,key)=> ( <Vote key={key} nume={item.name} url={item.url} onChangeVote={reciveVote} unic={recieveVote}  />) )} 
+     
       </div>
 
       <div className="right-container">
+      
+      <RightTopCard />
+      <RightBottomCard />
 
-          < RightTopCard 
-           nume = {nume}
-           url = {url}
-           />
-          < RightBottomCard 
-           nume = {nume}
-           url = {url}
-           />
-        
+
       </div>
     </div>
   );

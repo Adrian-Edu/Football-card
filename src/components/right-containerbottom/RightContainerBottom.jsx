@@ -12,7 +12,7 @@ function RightBottomCard (props) {
           <h4>{props.nume}</h4>
 
           <div className="right-container-first-2-p">
-          <p>1</p>
+          <p>{props.vote}</p>
           <p>Votes</p>
 
           </div>

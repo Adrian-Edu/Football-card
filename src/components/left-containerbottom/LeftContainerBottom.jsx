@@ -5,10 +5,13 @@ function Vote (props) {
 
   const [changeVote, setChangeVote]= useState(0)
 
-  const handleClick = () => {
+  
+  const handleClick = (e) => {
     setChangeVote(changeVote + 1)
+    props.onChangeVote(changeVote)
   }
 
+  console.log(props.unic)
 
     return (
           
@@ -22,7 +25,7 @@ function Vote (props) {
         <div className="mid-writing">
           <h4>{props.nume}</h4>
             <div> 
-            <p>{changeVote}</p>
+            <p>{changeVote} </p>
             <h4>Votes</h4>
            </div>
         </div>

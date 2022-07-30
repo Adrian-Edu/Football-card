@@ -8,20 +8,16 @@
     margin: 15px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
-  
-  
-.mid-writing {
-    width: 104.98;
-    height: 25.94;
-  }
-  
+    
   
   .mid-writing  :first-child {
     font-family: 'Poppins';
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
+    word-wrap: break-word;
   }
   
   .mid-writing  :last-child {
@@ -52,4 +48,9 @@
     position: relative;
     left: 100px;
     cursor: pointer;
+  }
+
+  .logo img {
+    min-height: fit-content ;
+    min-width: fit-content;
   }

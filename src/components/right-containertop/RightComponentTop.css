@@ -16,9 +16,11 @@
   }
   
   .right-container-first img {
-    width: 89px;
+    width: 100px;
     height: 124px;
-    margin: 15px;
+    padding: 5px 15px 15px 15px ;
+    display: flex;
+    justify-content: center;
   }
   
   .right-container-first-h-p h4 {
