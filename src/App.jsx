@@ -6,56 +6,80 @@ import RightTopCard from "./components/right-containertop/RightComponent";
 import RightBottomCard from "./components/right-containerbottom/RightContainerBottom";
 
 const data = [
+  {
+    id: "csadds",
+    nume: "Team 1",
+    url: "url",
+    votes: 0,
+  },
+  {
+    id: "xxsaf",
+    nume: "Team 2",
+    url: "url",
+    votes: 0,
+  },
+];
 
-]
+function App() {
+  const [teams, setTeams] = useState(data);
 
-function App(props) {
+  const sortedTeams = [...teams];
+  sortedTeams.sort((a, b) => {
+    if (a.votes > b.votes) return -1;
+    if (a.votes < b.votes) return 1;
+    return 0;
+  });
 
-  const [teams, setTeams] = useState(data)
-  const [recieveVote, setRecieveVote] = useState("")
-
+  console.log("sorted", sortedTeams);
   const onTeamAdd = (team) => {
     // aici o sa primesti datele din copil (faci call la o functie din copil si trimiti ca parametru team)
-    console.log(team) // aici cel mai probabil o sa vrei sa adaogi echipa in state-ul ce tine toate echipele
-    setTeams(
-      prevState => [
-        ...prevState, // punem tot ce era in state
-         team // si mai adaugam o pozie noua - obiectul team
-      ]
-    )
-  }
+    console.log(team); // aici cel mai probabil o sa vrei sa adaogi echipa in state-ul ce tine toate echipele
+    const id = Math.random().toString(36).slice(2, 10);
 
-  const onTeamId = (id) => {
-    console.log(id)
-    setRecieveVote(
-      prevState => [
-        ...prevState, id
-      ]
-    )
-  }
+    setTeams((prevState) => [
+      ...prevState, // punem tot ce era in state
+      {
+        id: id,
+        ...team,
+      }, // si mai adaugam o pozie noua - obiectul team
+    ]);
+  };
 
-  const reciveVote = (changeVote) => {
-    setRecieveVote(changeVote)
-  }
+  const onVoteClick = (id) => {
+    console.log(id);
+    setTeams((prevState) =>
+      prevState.map((item) => {
+        if (id === item.id) {
+          return {
+            ...item,
+            votes: item.votes + 1,
+          };
+        }
+        return item;
+      })
+    );
+  };
 
   return (
-    <div className="page-container">s
+    <div className="page-container">
       <div className="container">
-        <AddTeam
-          onAddTeam={onTeamAdd}
-          onAddId = {onTeamId}
-        />
+        <AddTeam onAddTeam={onTeamAdd} />
 
-        {teams.map((item,key)=> ( <Vote key={key} nume={item.name} url={item.url} onChangeVote={reciveVote} unic={recieveVote}  />) )} 
-     
+        {teams.map((item, key) => (
+          <Vote
+            key={key}
+            nume={item.name}
+            url={item.url}
+            onChangeVote={onVoteClick}
+            votes={item.votes}
+            id={item.id}
+          />
+        ))}
       </div>
-
       <div className="right-container">
-      
-      <RightTopCard />
-      <RightBottomCard />
-
-
+        {sortedTeams[0] && <RightTopCard nume={sortedTeams[0].nume} />}
+        {sortedTeams[1] && <RightBottomCard nume={sortedTeams[1].nume} />}
+        {sortedTeams[2] && <RightBottomCard />}
       </div>
     </div>
   );

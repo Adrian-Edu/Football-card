@@ -1,58 +1,59 @@
-import React, {useState} from "react"
-import "./LeftContainertTop.css"
+import React, { useState } from "react";
+import "./LeftContainertTop.css";
 
+function AddTeam(props) {
+  const [changeTeam, setChangeTeam] = useState("Club Name");
+  const [changeUrl, setChangeURl] = useState("Logo Url");
+  const [changeTheTeam, setChangeTheTeam] = useState("");
+  const [changeTheUrl, setChangeTheUrl] = useState("");
 
-function AddTeam (props) {
+  console.log(props.onAddId);
 
-  const [changeTeam, setChangeTeam] = useState("Club Name")
-  const [changeUrl, setChangeURl] = useState("Logo Url")
-  const [changeTheTeam, setChangeTheTeam] = useState ("")
-  const [changeTheUrl, setChangeTheUrl] = useState ("")
+  const handleTeamChange = (e) => {
+    setChangeTeam(e.target.value);
+  };
 
-   const handleTeamChange = (e) => {
-    setChangeTeam(e.target.value)
-   }
+  const handleUrlChange = (e) => {
+    setChangeURl(e.target.value);
+  };
 
-   const handleUrlChange = (e) => {
-    setChangeURl(e.target.value)
-   }
+  const handleClickTeam = () => {
+    setChangeTeam("");
+  };
 
-   const handleClickTeam = () => {
-    setChangeTeam("")
-   }
+  const handleClickUrl = () => {
+    setChangeURl("");
+  };
 
-   const handleClickUrl = () => {
-    setChangeURl("")
-   }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setChangeTheTeam(changeTeam);
+    setChangeTheUrl(changeUrl);
 
-   const handleSubmit = (e) => {
+    props.onAddTeam({ name: changeTeam, url: changeUrl });
 
-    console.log(changeTeam)
-    console.log(changeUrl)
+    setChangeTeam(" ");
+    setChangeURl(" ");
+  };
 
-    setChangeTheTeam(changeTeam)
-    setChangeTheUrl(changeUrl)
-
-    props.onAddTeam({name: changeTeam, url: changeUrl})
-
-    setChangeTeam(" ")
-    setChangeURl(" ")
-
-    e.preventDefault()
-   }
-
-
- 
-    return (
-        <div className="top-container">
-          <h1>Football Teams</h1>
-          <form onSubmit={handleSubmit} className="form">
-            <input onClick={handleClickTeam } onChange={handleTeamChange } value={changeTeam}></input>
-            <input onClick={handleClickUrl} onChange={handleUrlChange} value={changeUrl}></input>
-            <button>Add a Team</button>
-          </form>
-        </div>
-    )
+  return (
+    <div className="top-container">
+      <h1>Football Teams</h1>
+      <form onSubmit={handleSubmit} className="form">
+        <input
+          onClick={handleClickTeam}
+          onChange={handleTeamChange}
+          value={changeTeam}
+        ></input>
+        <input
+          onClick={handleClickUrl}
+          onChange={handleUrlChange}
+          value={changeUrl}
+        ></input>
+        <button>Add a Team</button>
+      </form>
+    </div>
+  );
 }
 
-export default AddTeam
+export default AddTeam;
