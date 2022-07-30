@@ -11,6 +11,8 @@ function Vote (props) {
     props.onChangeVote(changeVote)
   }
 
+  console.log(props.unic)
+
     return (
           
         <div className="bottom-container">
@@ -23,13 +25,13 @@ function Vote (props) {
         <div className="mid-writing">
           <h4>{props.nume}</h4>
             <div> 
-            <p>{changeVote}</p>
+            <p>{changeVote} </p>
             <h4>Votes</h4>
            </div>
         </div>
 
         <div>
-          <button onClick={handleClick}  className="vote">Vote</button>
+          <button onClick={handleClick} className="vote">Vote</button>
         </div>
       </div>
     )

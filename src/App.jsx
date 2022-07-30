@@ -24,9 +24,14 @@ function App(props) {
       ]
     )
   }
-  
-  const uniqueVote = (id) => {
+
+  const onTeamId = (id) => {
     console.log(id)
+    setRecieveVote(
+      prevState => [
+        ...prevState, id
+      ]
+    )
   }
 
   const reciveVote = (changeVote) => {
@@ -38,10 +43,10 @@ function App(props) {
       <div className="container">
         <AddTeam
           onAddTeam={onTeamAdd}
-      
+          onAddId = {onTeamId}
         />
 
-        {teams.map((item,key)=> ( <Vote key={key} nume={item.name} url={item.url} onChangeVote={reciveVote} unic={uniqueVote} />) )} 
+        {teams.map((item,key)=> ( <Vote key={key} nume={item.name} url={item.url} onChangeVote={reciveVote} unic={recieveVote}  />) )} 
      
       </div>
 
